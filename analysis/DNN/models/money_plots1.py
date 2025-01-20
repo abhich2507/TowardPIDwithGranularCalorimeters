@@ -133,15 +133,15 @@ axes[0, 0].axhspan(
 
 
 if analysis_type == "ppi":
-    axes[0, 0].set_title(r'Accuracy $p/\pi$ as a Function of Cell Cross-Section Area', fontsize=14) 
+    axes[0, 0].set_title(r'Accuracy $p/\pi$ as a Function of Cell Cross-Section Area', fontsize=16) 
 elif analysis_type == "pik":
-    axes[0, 0].set_title(r'Accuracy $\pi/\K$ as a Function of Cell Cross-Section Area', fontsize=14) 
+    axes[0, 0].set_title(r'Accuracy $\pi/\K$ as a Function of Cell Cross-Section Area', fontsize=16) 
 elif analysis_type == "pk":
-    axes[0, 0].set_title(r'Accuracy $p/\K$ as a Function of Cell Cross-Section Area', fontsize=14) 
+    axes[0, 0].set_title(r'Accuracy $p/\K$ as a Function of Cell Cross-Section Area', fontsize=16) 
 
 axes[0, 0].axhline(y=base, color='red', linestyle='--', label='Baseline')  # Add baseline
-axes[0, 0].set_xlabel(r'$\Delta_{XY} \,\, [\mathrm{mm}^2]$', fontsize=14)
-axes[0, 0].set_ylabel('Accuracy', fontsize=14)
+axes[0, 0].set_xlabel(r'$\Delta_{XY} \,\, [\mathrm{mm}^2]$', fontsize=16)
+axes[0, 0].set_ylabel('Accuracy', fontsize=16)
 axes[0, 0].legend()  # Show the legend
 axes[0, 0].grid(True, linestyle='--', alpha=0.7)
 axes[0, 0].set_xscale('log')
@@ -175,14 +175,14 @@ axes[0, 1].axhspan(
 )
 
 if analysis_type == "ppi":
-    axes[0, 1].set_title(r'Accuracy $p/\pi$ as a Function of Longitudinal Segmentation', fontsize=14) 
+    axes[0, 1].set_title(r'Accuracy $p/\pi$ as a Function of Longitudinal Segmentation', fontsize=16) 
 elif analysis_type == "pik":
-    axes[0, 1].set_title(r'Accuracy $\pi/\K$ as a Function of Longitudinal Segmentation', fontsize=14) 
+    axes[0, 1].set_title(r'Accuracy $\pi/\K$ as a Function of Longitudinal Segmentation', fontsize=16) 
 elif analysis_type == "pk":
-    axes[0, 1].set_title(r'Accuracy $p/\K$ as a Function of Longitudinal Segmentation', fontsize=14) 
+    axes[0, 1].set_title(r'Accuracy $p/\K$ as a Function of Longitudinal Segmentation', fontsize=16) 
     
 axes[0, 1].axhline(y=base, color='red', linestyle='--', label='Baseline') 
-axes[0, 1].set_xlabel(r'$\Delta_{Z} \,\, [\mathrm{mm}]$', fontsize=14)
+axes[0, 1].set_xlabel(r'$\Delta_{Z} \,\, [\mathrm{mm}]$', fontsize=16)
 axes[0, 1].grid(True, linestyle='--', alpha=0.7)
 axes[0, 1].legend()  # Show the legend
 axes[0, 1].set_xscale('log')
@@ -200,15 +200,15 @@ axes[1, 0].axhspan(
 )
 
 if analysis_type == "ppi":
-    axes[1, 0].set_title(r'Accuracy $p/\pi$ as a Function of Cell Volume', fontsize=14) 
+    axes[1, 0].set_title(r'Accuracy $p/\pi$ as a Function of Cell Volume', fontsize=16) 
 elif analysis_type == "pik":
-    axes[1, 0].set_title(r'Accuracy $\pi/\K$ as a Function of Cell Volume', fontsize=14) 
+    axes[1, 0].set_title(r'Accuracy $\pi/\K$ as a Function of Cell Volume', fontsize=16) 
 elif analysis_type == "pk":
-    axes[1, 0].set_title(r'Accuracy $p/\K$ as a Function of Cell Volume', fontsize=14) 
+    axes[1, 0].set_title(r'Accuracy $p/\K$ as a Function of Cell Volume', fontsize=16) 
     
 axes[1, 0].axhline(y=base, color='red', linestyle='--', label='Baseline') 
-axes[1, 0].set_xlabel(r'$\Delta_{XYZ} \,\, [\mathrm{mm}^3]$', fontsize=14)
-axes[1, 0].set_ylabel('Accuracy', fontsize=14)
+axes[1, 0].set_xlabel(r'$\Delta_{XYZ} \,\, [\mathrm{mm}^3]$', fontsize=16)
+axes[1, 0].set_ylabel('Accuracy', fontsize=16)
 axes[1, 0].grid(True, linestyle='--', alpha=0.7)
 axes[1, 0].legend()
 axes[1, 0].set_xscale('log')
@@ -254,16 +254,16 @@ sns.heatmap(
     **heatmap_kwargs
 )
 
-axes[1, 1].set_xlabel(r'$\Delta_{XY} \,\, [\mathrm{mm}^2]$', fontsize=14)
-axes[1, 1].set_ylabel(r'$\Delta_{Z} \,\, [\mathrm{mm}]$', fontsize=14)
-axes[1, 1].set_title('Accuracy Matrix', fontsize=14)
+axes[1, 1].set_xlabel(r'$\Delta_{XY} \,\, [\mathrm{mm}^2]$', fontsize=16)
+axes[1, 1].set_ylabel(r'$\Delta_{Z} \,\, [\mathrm{mm}]$', fontsize=16)
+axes[1, 1].set_title('Accuracy Matrix', fontsize=16)
 
 if analysis_type == "ppi":
-    axes[1, 1].set_title(r'Accuracy $p/\pi$ as a Function of Segmentation', fontsize=14) 
+    axes[1, 1].set_title(r'Accuracy $p/\pi$ as a Function of Segmentation', fontsize=16) 
 elif analysis_type == "pik":
-    axes[1, 1].set_title(r'Accuracy $\pi/\K$ as a Function of Segmentation', fontsize=14) 
+    axes[1, 1].set_title(r'Accuracy $\pi/\K$ as a Function of Segmentation', fontsize=16) 
 elif analysis_type == "pk":
-    axes[1, 1].set_title(r'Accuracy $p/\K$ as a Function of Segmentation', fontsize=14) 
+    axes[1, 1].set_title(r'Accuracy $p/\K$ as a Function of Segmentation', fontsize=16) 
 
 plt.tight_layout()
 plt.savefig(f'/home/alma1/GNN/Deepset/28oct_DNN/TowardPIDwithGranularCalorimeters/results/DNN/moneyplot.png')
