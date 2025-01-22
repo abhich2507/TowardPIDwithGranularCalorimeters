@@ -3,7 +3,7 @@
 
 import os
 import shutil
-
+import subprocess
 # Define the list of granularities
 granularities = [
     "100_100_10", "100_100_25", "10_10_10", "10_10_25",
@@ -13,10 +13,10 @@ granularities = [
 ]
 
 # Directory where your files are currently located
-source_directory = "/home/alma1/GNN/Deepset/28oct_DNN/DNN_plots/"
+source_directory = "/home/alma1/GNN/Deepset/28oct_DNN/DNN_plots/pp/"
 
 # Directory where you want to store the new granularity folders
-target_base_directory = "/home/alma1/GNN/Deepset/28oct_DNN/results/"
+target_base_directory = "/home/alma1/GNN/Deepset/28oct_DNN/results/pp/"
 
 # Iterate through granularities
 for granularity in granularities:
