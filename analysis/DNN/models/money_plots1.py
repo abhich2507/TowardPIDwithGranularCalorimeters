@@ -21,7 +21,7 @@ elif analysis_type == "pk":
 elif analysis_type == "ppik":
     folder_path += "proton_pion_kaon"
 
-target_file = "/home/alma1/GNN/Deepset/28oct_DNN/TowardPIDwithGranularCalorimeters/results/DNN/accuracyTable.csv"
+target_file = "/home/alma1/GNN/Deepset/28oct_DNN/TowardPIDwithGranularCalorimeters/results/DNN/pp/accuracyTable.csv"
 summaryTable = pd.read_csv(target_file, sep=",")
 summaryTable = summaryTable[summaryTable["accuracy"] != -1]
 
@@ -84,8 +84,8 @@ error_XYZ_upper = [error_max - accuracy for accuracy, error_max in zip(accuracy_
 volume_XYZ, accuracy_XYZ, error_XYZ_lower, error_XYZ_upper = zip(*sorted(zip(volume_XYZ, accuracy_XYZ, error_XYZ_lower, error_XYZ_upper), key=lambda x: x[0]))
 
 
-baseline_file = "/home/alma1/GNN/Deepset/28oct_DNN/TowardPIDwithGranularCalorimeters/results/DNN/baseline.tsv"
-baselineTable = pd.read_csv(baseline_file, sep="\t")
+baseline_file = "/home/alma1/GNN/Deepset/28oct_DNN/TowardPIDwithGranularCalorimeters/results/DNN/pp/baseline.csv"
+baselineTable = pd.read_csv(baseline_file)
 baselineTable['accuracy']=baselineTable['accuracy']*100.
 baselineTable['minVal']=baselineTable['minVal']*100.
 baselineTable['maxVal']=baselineTable['maxVal']*100.
